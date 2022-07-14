@@ -7,4 +7,5 @@ dependencies {
 
 	implementation Dependencies.FRAGMENT
 	implementation Dependencies.LIFECYCLE_RUNTIME
+	implementation Dependencies.MATERIAL
 }
