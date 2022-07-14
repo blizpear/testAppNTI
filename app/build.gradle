@@ -1,0 +1,12 @@
+apply plugin: Plugins.ANDROID_APPLICATION
+apply plugin: Plugins.KOTLIN_ANDROID
+
+apply from: "$rootDir/build_system/androidApplication.gradle"
+
+dependencies {
+
+	implementation Dependencies.MATERIAL
+	implementation Dependencies.KOIN_ANDROID
+	implementation Dependencies.CICERONE
+
+}
