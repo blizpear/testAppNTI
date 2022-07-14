@@ -9,4 +9,5 @@ dependencies {
 	implementation Dependencies.KOIN_ANDROID
 	implementation Dependencies.CICERONE
 
+	implementation project(":shared:network")
 }
