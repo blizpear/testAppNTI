@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/card"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:background="@color/blue">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/constraint"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:minHeight="300dp">
+
+			<TextView
+				android:id="@+id/food_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:textStyle="bold"
+				android:textAlignment="center"
+				android:textColor="@android:color/white"
+				app:layout_constraintEnd_toEndOf="@id/constraint"
+				app:layout_constraintStart_toStartOf="@id/constraint"
+				app:layout_constraintTop_toTopOf="@id/constraint"
+				tools:text="магура"/>
+
+			<TextView
+				android:id="@+id/food_content"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:textSize="11sp"
+				android:gravity="center"
+				android:maxLines="3"
+				android:ellipsize="end"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/food_name"
+				tools:text="тунец"/>
+
+			<Space
+				android:id="@+id/spacer"
+				android:layout_width="0dp"
+				android:layout_height="32dp"
+				app:layout_constraintTop_toBottomOf="@id/food_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"/>
+
+			<TextView
+				android:id="@+id/food_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="4dp"
+				android:textStyle="bold"
+				android:textColor="@android:color/white"
+				app:layout_constraintHorizontal_chainStyle="packed"
+				app:layout_constraintBottom_toTopOf="@id/food_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/slash"
+				tools:text="80r"/>
+
+			<TextView
+				android:id="@+id/slash"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="4dp"
+				android:text="@string/slash"
+				android:textSize="11sp"
+				app:layout_constraintStart_toEndOf="@id/food_price"
+				app:layout_constraintEnd_toStartOf="@id/food_weight"
+				app:layout_constraintBottom_toTopOf="@id/food_image"/>
+
+			<TextView
+				android:id="@+id/food_weight"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="4dp"
+				android:layout_marginEnd="4dp"
+				android:textSize="11sp"
+				app:layout_constraintBottom_toTopOf="@id/food_image"
+				app:layout_constraintStart_toEndOf="@+id/slash"
+				app:layout_constraintEnd_toEndOf="parent"
+				tools:text="45g"/>
+
+			<ImageView
+				android:id="@+id/food_spicy"
+				android:layout_width="24dp"
+				android:layout_height="20dp"
+				android:layout_margin="4dp"
+				android:src="@drawable/ic_chilli_pepper"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintBottom_toTopOf="@id/food_image"/>
+
+			<ImageView
+				android:id="@+id/food_image"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:scaleType="centerCrop"
+				android:adjustViewBounds="true"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				tools:src="@drawable/img"/>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</com.google.android.material.card.MaterialCardView>
+
+	<Space
+		android:id="@+id/space_outside"
+		android:layout_width="0dp"
+		android:layout_height="8dp"
+		app:layout_constraintTop_toBottomOf="@id/card"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"/>
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/in_cart"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="8dp"
+		android:paddingVertical="16dp"
+		android:text="@string/in_cart"
+		android:textSize="16sp"
+		android:textColor="@android:color/white"
+		android:backgroundTint="@color/blue"
+		android:translationY="-42dp"
+		android:textAllCaps="false"
+		app:layout_constraintTop_toBottomOf="@id/space_outside"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:cornerRadius="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
