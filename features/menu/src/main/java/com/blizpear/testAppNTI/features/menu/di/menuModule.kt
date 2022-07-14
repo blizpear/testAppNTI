@@ -7,6 +7,8 @@ import com.blizpear.testAppNTI.features.menu.data.repository.MenuRepositoryImpl
 import com.blizpear.testAppNTI.features.menu.domain.repository.MenuRepository
 import com.blizpear.testAppNTI.features.menu.domain.usecases.GetMenuUseCase
 import com.blizpear.testAppNTI.features.menu.domain.usecases.GetSubMenuUseCase
+import com.blizpear.testAppNTI.features.menu.presentation.MenuViewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
@@ -20,4 +22,11 @@ val menuModule = module {
 
 	factory { GetMenuUseCase(repository = get()) }
 	factory { GetSubMenuUseCase(repository = get()) }
+
+	viewModel {
+		MenuViewModel(
+			getMenuUseCase = get(),
+			getSubMenuUseCase = get()
+		)
+	}
 }
