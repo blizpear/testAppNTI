@@ -1,2 +1,3 @@
 rootProject.name = "TestAppNTI"
 include ':app'
+include 'shared:network'
