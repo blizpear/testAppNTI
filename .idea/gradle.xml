@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/features/menu" />
             <option value="$PROJECT_DIR$/shared" />
             <option value="$PROJECT_DIR$/shared/network" />
+            <option value="$PROJECT_DIR$/shared/ui" />
           </set>
         </option>
       </GradleProjectSettings>
