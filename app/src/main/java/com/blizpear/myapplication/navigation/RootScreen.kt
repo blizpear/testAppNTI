@@ -1,3 +1,5 @@
 package com.blizpear.myapplication.navigation
 
-//fun provideRootScreen() = TODO()
+import com.blizpear.testAppNTI.features.menu.getMenuScreen
+
+fun provideRootScreen() = getMenuScreen()
